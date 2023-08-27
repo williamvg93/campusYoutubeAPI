@@ -13,8 +13,8 @@
 :root {
     --linkColor : #5a5a5a;
     --bgColorNav : #fff;
+    --bgColorSide : #fff;
 }
-
 
 
 
@@ -52,7 +52,7 @@ nav {
     justify-content: space-between;
     background-color: var(--bgColorNav);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    position: static;
+    position: sticky;
     top: 0;
     z-index: 10;
 }
@@ -108,3 +108,69 @@ nav {
 .nav-middle .search-box img {
     width: .9rem;
 }
+
+
+/* ----------------------------------------------- */
+/* ------------------- Sidebar ------------------- */
+/* ----------------------------------------------- */
+
+.sidebar {
+    background-color: var(--bgColorSide);
+    width: 14vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-left: 5vh;
+    padding-top: 12vh;
+}
+
+.shortcut-links a img {
+    width: 1.2rem;
+    margin-right: .9rem;
+} 
+
+.shortcut-links a, .suscribed-list a {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.shortcut-links a:first-child {
+    color: #ed3833;
+}
+
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    width: 85%;
+}
+
+.suscribed-list h3 {
+    font-size: .9rem;
+    margin: 1.2rem 0;
+    color: #5a5a5a;
+}
+
+.suscribed-list a img {
+    width: 1.5rem;
+    margin-right: 1.2rem;
+    border-radius: 50%;
+}
+
+
+.small-sidebar {
+    width: 5vw;
+}
+
+.small-sidebar a p, .small-sidebar h3 {
+    display: none;
+}
+
+.small-sidebar hr {
+    width: 50%;
+    margin-bottom: 1.5rem;
+}
+
