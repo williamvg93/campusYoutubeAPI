@@ -14,6 +14,8 @@
     --linkColor : #5a5a5a;
     --bgColorNav : #fff;
     --bgColorSide : #fff;
+    --bgColorCardVid : #5a5a5a;
+    --ColorCardLinkVid : #000;
 }
 
 
@@ -22,9 +24,9 @@
 /* ---------------- Global Styles ---------------- */
 /* ----------------------------------------------- */
 
-body {
+/* body {
     height: 3000px;
-}
+} */
 
 a {
     text-decoration: none;
@@ -74,7 +76,7 @@ nav {
 }
 
 .nav-left .menu-logo {
-    width: clamp(6rem,8rem,8rem);
+    width: clamp(4.5rem,20vw,9rem);
 }
 
 .nav-middle .cont-mic {
@@ -93,13 +95,14 @@ nav {
 
 .nav-middle .search-box {
     border: 1px solid #ccc;
-    margin-right: 0.9rem;
+    margin-right: clamp(.5vw,2vw,2vw);
     border-radius: 25px;
     padding: .5rem .8rem;
 }
 
 .nav-middle .search-box input {
-    width: clamp(10vw,25vw,25vw);
+/*     width: clamp(10vw,25vw,25vw); */
+    width: clamp(5rem,40vw,28rem);
     border: 0;
     outline: 0;
     background: transparent;
@@ -174,3 +177,96 @@ nav {
     margin-bottom: 1.5rem;
 }
 
+/* ----------------------------------------------- */
+/* -------------------- Main --------------------- */
+/* ----------------------------------------------- */
+
+.container {
+    background-color: #f9f9f9;
+    padding-left: 15vw;
+    padding-right: 2%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.large-container {
+    padding-left: 6vw;
+}
+
+.container .banner {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.container .banner img {
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.list-container .vid-list .thumbnail {
+    width: 100%;
+    border-radius: .8rem;
+}
+
+.list-container .flex-div {
+    align-items: flex-start;
+    margin-top: .5rem;
+}
+
+.vid-list .flex-div img {
+    width: 2.1rem;
+    border-radius: 50%;
+}
+
+.vid-info {
+    color: var(--bgColorCardVid);
+    font-size: .8rem;
+}
+
+.vid-info a {
+    color: var(--ColorCardLinkVid);
+    font-weight: 600;
+    display: block;
+    margin-bottom: .3px;
+}
+
+
+
+
+
+/* ----------------------------------------------- */
+/* ------------------- Querys -------------------- */
+/* ----------------------------------------------- */
+
+@media (max-width: 1330px) {
+    .menu-icon, .sidebar, .nav-right img {
+        display: none;
+    }
+
+    .container, .large-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nav-right #user_img {
+        display: block;
+        width: 2rem;
+    }
+
+
+}
+
+
+@media (max-width: 500px) {
+    .nav-middle .mic-icon, .nav-middle .cont-mic{
+        display: none;
+    }
+
+}
