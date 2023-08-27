@@ -3,3 +3,108 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
+/* ----------------------------------------------- */
+/* --------------- Global Variables -------------- */
+/* ----------------------------------------------- */
+
+
+:root {
+    --linkColor : #5a5a5a;
+    --bgColorNav : #fff;
+}
+
+
+
+
+/* ----------------------------------------------- */
+/* ---------------- Global Styles ---------------- */
+/* ----------------------------------------------- */
+
+body {
+    height: 3000px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--linkColor);
+}
+
+img {
+    cursor: pointer;
+}
+
+
+.flex-div {
+    display: flex;
+    align-items: center;
+}
+
+
+/* ----------------------------------------------- */
+/* --------------------- Nav --------------------- */
+/* ----------------------------------------------- */
+
+
+nav {
+    padding: 10px 2%;
+    justify-content: space-between;
+    background-color: var(--bgColorNav);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: static;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-right > img {
+    width: clamp(1rem,1.6rem,1.8rem);
+    margin-right: 1.2rem;
+}
+
+.nav-right #user_img {
+    width: clamp(1.5rem,2.5rem,2.5rem);
+    border-radius: 50%;
+    margin-right: 0;
+}
+
+.nav-left .menu-icon {
+    width: clamp(1rem,1.6rem,1.8rem);
+    margin-right: 1.3rem;
+}
+
+.nav-left .menu-logo {
+    width: clamp(6rem,8rem,8rem);
+}
+
+.nav-middle .cont-mic {
+    width: clamp(1.5rem,2.3rem,2.3rem);
+    border: 1px solid #a8a8a8;
+    border-radius: 50%;
+    padding: .3rem .6rem;
+    background-color: #818181;
+}
+
+.nav-middle .mic-icon {
+    width: 100%;
+    object-fit: contain;
+    filter: invert(100%) sepia(0%) saturate(9%) hue-rotate(223deg) brightness(103%) contrast(101%);
+}
+
+.nav-middle .search-box {
+    border: 1px solid #ccc;
+    margin-right: 0.9rem;
+    border-radius: 25px;
+    padding: .5rem .8rem;
+}
+
+.nav-middle .search-box input {
+    width: clamp(10vw,25vw,25vw);
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+.nav-middle .search-box img {
+    width: .9rem;
+}
