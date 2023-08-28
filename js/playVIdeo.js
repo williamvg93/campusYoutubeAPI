@@ -1,3 +1,10 @@
+const urlData = window.location.search
+console.log(urlData);
+const urlParam = new URLSearchParams(urlData)
+console.log(urlParam);
+urlVid = urlParam.get('idVid')
+console.log(urlVid);
+
 const urlChanel = 'https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US';
 
 const urlVidLis = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US';
@@ -69,7 +76,3 @@ const peticion = async(urlPet, optiPet) => {
 
      /* Chanel ID: "UC8fkwsjcI_MhralEX1g4OBw" UC8fkwsjcI_MhralEX1g4OBw */
 }
-
-let resPetChanel = peticion(urlChanel, "chanel")
-let resPetVidList = peticion(urlVidLis, "vidList")
-

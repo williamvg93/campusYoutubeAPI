@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Video</title>
     <link rel="stylesheet" href="../style/main.css">
+    <script src="../js/playVIdeo.js" defer></script>
 </head>
 <body>
     <!--  Nav -->
@@ -31,10 +32,10 @@
 
     <div class="container play-container">
         <div class="row">
-            <div class="play-video">
-                <video controls autoplay >
-                    <source src="../video/video.mp4" type="video/mp4">
-                </video>
+            <div class="play-video" id="contPlayVid">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/znYqquFE1To?si=0LEHxTMcnFagHCYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                 <div class="tags">
                     <a href="#"> #Html </a>
                     <a href="#"> #JavaScript </a>
