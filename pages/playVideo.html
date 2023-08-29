@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play Video</title>
     <link rel="stylesheet" href="../style/main.css">
-    <script src="../js/playVIdeo.js" defer></script>
+    <script src="../js/playVIdeo.js" defer type="module"></script>
 </head>
 <body>
     <!--  Nav -->
     <nav class="flex-div">
         <div class="nav-left flex-div">
             <img src="../img/menu.png" alt="" class="menu-icon">
-            <img src="../img/youtube-logo.png" alt="" class="menu-logo">
+            <a href="../index.html"><img src="../img/youtube-logo.png" alt="" class="menu-logo"></a>
         </div>
         <div class="nav-middle flex-div">
             <div class="search-box flex-div">
@@ -22,20 +22,18 @@
                 <img src="../img/mic.svg" alt="" class="mic-icon">
             </div>
         </div>
-        <div class="nav-right flex-div">
+        <div class="nav-right flex-div" id="contNavLogo">
             <img src="../img/upload.png" alt="">
             <img src="../img/more.png" alt="">
             <img src="../img/notification.png" alt="">
-            <img src="../img/Jack.png" alt="" id="user_img">
+             <!-- content is added with javascript -->
         </div>
     </nav>
 
     <div class="container play-container">
         <div class="row">
             <div class="play-video" id="contPlayVid">
-
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/znYqquFE1To?si=0LEHxTMcnFagHCYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+                <!-- content is added with javascript -->
                 <div class="tags">
                     <a href="#"> #Html </a>
                     <a href="#"> #JavaScript </a>
@@ -147,89 +145,8 @@
 
 
 
-            <div class="right-sidebar">
-
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail1.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail2.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail3.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail4.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail5.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail6.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail7.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail8.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail1.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-                <div class="side-video-list">
-                    <a href="#" class="small-thumbnail"><img src="../img/thumbnail2.png" alt=""></a>
-                    <div class="vid-info" id="vid-info">
-                        <a href="#">Best channel to learn coding that help you to be a web developer</a>
-                        <p>Easy Tutorials</p>
-                        <p>15k &bull; views 2 days</p>
-                    </div>
-                </div>
-
+            <div class="right-sidebar" id="rightSidebar">
+                 <!-- content is added with javascript -->
             </div>
         </div>
     </div>

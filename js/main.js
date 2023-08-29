@@ -8,3 +8,4 @@ menuIcon.onclick = () => {
     sidebar.classList.toggle("small-sidebar")
     container.classList.toggle("large-container")
 }
+
