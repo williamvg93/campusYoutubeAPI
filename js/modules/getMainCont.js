@@ -31,7 +31,7 @@ export const peticionIndex = async(typePet, urlPet, optiPet, options) => {
         contBanner.insertAdjacentHTML('beforeend', /* html */ `
             <img src="${resp.banner.desktop[5].url}" alt="">
         `)
-     
+
         return resp
     }
 
@@ -45,7 +45,7 @@ export const peticionIndex = async(typePet, urlPet, optiPet, options) => {
 
             ${resp.contents.map((data) =>  /* html */ `         
                     <div class="vid-list">
-                        <a href="pages/playVideo.html?idVid=${data.video.videoId}"><img src="${data.video.thumbnails[3].url}" alt="" class="thumbnail"></a>
+                        <a href="pages/playVideo.html?idVid=${data.video.videoId}&vidView=${data.video.publishedTimeText}"><img src="${data.video.thumbnails[3].url}" alt="" class="thumbnail"></a>
                         <div class="flex-div">
                             <img src="${urlAva}" alt="">
                             <div class="vid-info">

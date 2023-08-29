@@ -5,7 +5,9 @@ console.log(urlData);
 const urlParam = new URLSearchParams(urlData)
 console.log(urlParam);
 let vidId = urlParam.get('idVid')
+let vidViews = urlParam.get('vidView')
 console.log(vidId);
+console.log(vidViews);
 
 const options = {
 	method: 'GET',
@@ -31,5 +33,5 @@ const urlVidDetJson = '../../source/videoDetails.json'
 /* let resPetVidList = getVidList("api", urlVidLis, "vidList", options) */
 
 /* let resPetChanel = peticion("json", urlChaJson) */
-let resPetVidDet = getVidDet("json",urlVidDetJson, vidId)
+let resPetVidDet = getVidDet("json",urlVidDetJson, vidId, vidViews)
 let resPetVidList = getVidList("json",urlVidLisJson, vidId)
