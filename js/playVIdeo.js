@@ -30,9 +30,9 @@ let urlVidDetJson = '/campusYoutubeAPI/source/videoDetails.json'
 
 if (urlHost == '127.0.0.1') {
 	console.log(urlHost);
-	urlChaJson = '/source/chanelDetails.json'
-	urlVidLisJson = '/source/chanelVideos.json'
-	urlVidDetJson = '/source/videoDetails.json'
+	urlChaJson = './source/chanelDetails.json'
+	urlVidLisJson = './source/chanelVideos.json'
+	urlVidDetJson = './source/videoDetails.json'
 }
 
 /* let resPetChanel = peticion("api", urlChanel, "chanel", options) */
