@@ -4,8 +4,10 @@ const urlChanel = 'https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkws
 
 const urlVidLis = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US';
 
-const urlChaJson = '../source/chanelDetails.json'
-const urlVidLisJson = '../source/chanelVideos.json'
+/* const urlChaJson = '../source/chanelDetails.json' */
+/* const urlVidLisJson = '../source/chanelVideos.json' */
+const urlChaJson = 'source/chanelDetails.json'
+const urlVidLisJson = 'source/chanelVideos.json'
 
 /* Chanel ID: "UC8fkwsjcI_MhralEX1g4OBw" UC8fkwsjcI_MhralEX1g4OBw */
 
