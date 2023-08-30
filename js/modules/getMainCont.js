@@ -60,3 +60,26 @@ export const peticionIndex = async(typePet, urlPet, optiPet, options) => {
         `)
     }
 }
+
+export const getVidList = async (typePet, urlPet, options) => {
+    
+    let peticion = ''
+    if (typePet != 'json'){
+        peticion = await fetch(urlPet, options)   
+    } else {
+        peticion = await fetch(urlPet)   
+    }
+    let resp = await peticion.json();
+    console.log(peticion);
+    let dataList = []
+    resp.contents.map( (data) => {
+/*         console.log(data) */
+        let newData = {
+            id : data.video.videoId,
+            name : data.video.title,
+            fechaPu : data.video.publishedTimeText
+        }
+        dataList.push(newData)
+    })  
+    return dataList
+}
