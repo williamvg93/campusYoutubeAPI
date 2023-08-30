@@ -5,13 +5,13 @@ const urlChanel = 'https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkws
 const urlVidLis = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US';
 
 const urlHost = window.location.hostname
-let urlChaJson = '/source/chanelDetails.json'
-let urlVidLisJson = '/source/chanelVideos.json'
+let urlChaJson = '/campusYoutubeAPI/source/chanelDetails.json'
+let urlVidLisJson = '/campusYoutubeAPI/source/chanelVideos.json'
 
 if (urlHost == '127.0.0.1') {
 	console.log(urlHost);
-	urlChaJson = 'source/chanelDetails.json'
-	urlVidLisJson = 'source/chanelVideos.json'
+	urlChaJson = './source/chanelDetails.json'
+	urlVidLisJson = './source/chanelVideos.json'
 }
 
 
