@@ -4,10 +4,16 @@ const urlChanel = 'https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkws
 
 const urlVidLis = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US';
 
-/* const urlChaJson = '../source/chanelDetails.json' */
-const urlChaJson = './campusYoutubeAPI/source/chanelDetails.json'
-const urlVidLisJson = './campusYoutubeAPI/source/chanelVideos.json'
-console.log();
+const urlHost = window.location.hostname
+let urlChaJson = '/source/chanelDetails.json'
+let urlVidLisJson = '/source/chanelVideos.json'
+
+if (urlHost == '127.0.0.1') {
+	console.log(urlHost);
+	urlChaJson = 'source/chanelDetails.json'
+	urlVidLisJson = 'source/chanelVideos.json'
+}
+
 
 /* Chanel ID: "UC8fkwsjcI_MhralEX1g4OBw" UC8fkwsjcI_MhralEX1g4OBw */
 

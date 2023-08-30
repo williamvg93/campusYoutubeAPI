@@ -23,10 +23,17 @@ const urlVidLis = 'https://youtube138.p.rapidapi.com/channel/videos/?id=UC8fkwsj
 
 const urlVidDet = `https://youtube138.p.rapidapi.com/video/details/?id=${vidId}&hl=en&gl=US`;
 
+const urlHost = window.location.hostname
+let urlChaJson = '/campusYoutubeAPI/source/chanelDetails.json'
+let urlVidLisJson = '/campusYoutubeAPI/source/chanelVideos.json'
+let urlVidDetJson = '/campusYoutubeAPI/source/videoDetails.json'
 
-const urlChaJson = '../../source/chanelDetails.json'
-const urlVidLisJson = '../../source/chanelVideos.json'
-const urlVidDetJson = '../../source/videoDetails.json'
+if (urlHost == '127.0.0.1') {
+	console.log(urlHost);
+	urlChaJson = '/source/chanelDetails.json'
+	urlVidLisJson = '/source/chanelVideos.json'
+	urlVidDetJson = '/source/videoDetails.json'
+}
 
 /* let resPetChanel = peticion("api", urlChanel, "chanel", options) */
 /* let resPetVidDet = getVidDet("api", urlVidDet, "vidDet", options) */
