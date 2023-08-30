@@ -4,13 +4,25 @@ import { peticionIndex } from "./modules/getMainCont.js";
 let menuIcon = document.querySelector('.menu-icon')
 let sidebar = document.querySelector('.sidebar')
 let container = document.querySelector('.container')
+let searchInput = document.querySelector('#searchInput')
 
-console.log(sidebar);
+console.log(searchInput);
 
 menuIcon.onclick = () => {
     sidebar.classList.toggle("small-sidebar")
     container.classList.toggle("large-container")
 }
+
+searchInput.addEventListener("change", () => {
+
+    console.log('function activate !!!');
+    console.log(searchInput.value.toLowerCase());
+    let listaEleme = document.querySelector('.resuSearList')
+    listaEleme.style.visibility = "visible"
+
+})
+
+
 
 
 const urlChanel = 'https://youtube138.p.rapidapi.com/channel/details/?id=UC8fkwsjcI_MhralEX1g4OBw&hl=en&gl=US';

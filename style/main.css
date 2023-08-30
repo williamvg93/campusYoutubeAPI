@@ -103,6 +103,23 @@ img {
     justify-content: center;
 }
 
+.resuSearList {
+    width: 38vw;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    top: 85%;
+    right: 28.5%;
+    visibility: hidden;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.resuSearList li {
+    list-style: none;
+}
+
 /* ----------------------------------------------- */
 /* --------------------- Nav --------------------- */
 /* ----------------------------------------------- */
