@@ -93,6 +93,15 @@ img {
     align-items: center;
 }
 
+.margin-center {
+    margin: auto;
+}
+
+.contComVid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* ----------------------------------------------- */
 /* --------------------- Nav --------------------- */

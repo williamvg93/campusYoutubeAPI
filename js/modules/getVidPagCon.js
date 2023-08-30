@@ -1,5 +1,8 @@
 let urlAva = ""
 let userName = ""
+let vidComments = "" 
+
+
 
 export const getVidDet = async(typePet, urlPet, vidId, vidViews) => {
 
@@ -88,15 +91,75 @@ export const getVidDet = async(typePet, urlPet, vidId, vidViews) => {
         <span>${resp.author.stats.subscribersText}</span>
     `)
 
-    mainVidDes.insertAdjacentHtml('beforeend', /* html */ `
-    <p>${userName}</p>
-    <span>${resp.description}</span>
-`)
+    /* Agregando descripcion del video principal  */
+    mainVidDes.insertAdjacentText('beforeend', `
+        ${resp.description}
+    `)
 
+    /* Agregando cantidad comentarios del video principal  */
 
+    console.log(resp.stats.comments);
+    if (resp.stats.comments == null) {
+        mainVidDes.insertAdjacentHTML('beforeend', /* html */`
+            <hr>
+            <div class="contComVid">
+                <h4 class="">Comments are off</h4>
+            </div>
+        `)
+    } else {
+
+        ( async(typePetCom) => {
+            const optionsCom = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': '988cd5333amsh5514483de96ce71p152625jsnab419d6b67d8',
+                    'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
+                }
+            };
+            const urlVidDet = `https://youtube138.p.rapidapi.com/video/comments/?id=${vidId}&hl=en&gl=US`;
+
+            let peticionCom = ''
+
+            if (typePetCom != 'json'){
+                peticionCom = await fetch(urlPet, optionsCom)   
+            } else {
+                peticionCom = await fetch(urlPet)   
+            }
+            let respCom = await peticionCom.json();
+
+            mainVidDes.insertAdjacentHTML('beforeend', /* html */`
+            <hr>
+            <h4>${resp.stats.comments}</h4>
+            <div class="add-comment">
+                <img src="../img/Jack.png" alt="">
+                <input type="text" name="" id="" placeholder="Write comments....">
+            </div>
+
+            ${respCom.comments.map((vidCom) => /* html */`
+                        <div class="old-comment">
+                            <img src="../img/Jack.png" alt="">
+                            <div>
+                                <h3>${vidCom.author.title} <span>${vidCom.publishedTimeText}</span></h3>
+                                <p>${vidCom.content}</p>
+                                <div class="comment-act">
+                                    <img src="../img/like.png" alt="">
+                                    <span>${vidCom.stats.votes}</span>
+                                    <img src="../img/dislike.png" alt="">
+                                    <span>0</span>
+                                    <span>${vidCom.stats.replies}</span>
+                                    <a href="#">All replies</a>
+                                </div>
+                            </div>
+                        </div>
+                    `).join(" ")            
+                }   
+            `)
+
+        } ) ()
+
+    }
     
 }
-
 
 export const getVidList = async(typePet, urlPet, vidId) => {
 
