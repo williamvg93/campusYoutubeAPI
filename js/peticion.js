@@ -10,8 +10,8 @@ let urlVidLisJson = '/campusYoutubeAPI/source/chanelVideos.json'
 
 if (urlHost == '127.0.0.1') {
 	console.log(urlHost);
-	urlChaJson = './source/chanelDetails.json'
-	urlVidLisJson = './source/chanelVideos.json'
+	urlChaJson = '/source/chanelDetails.json'
+	urlVidLisJson = '/source/chanelVideos.json'
 }
 
 
@@ -20,7 +20,7 @@ if (urlHost == '127.0.0.1') {
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '988cd5333amsh5514483de96ce71p152625jsnab419d6b67d8',
+		'X-RapidAPI-Key': '96acef6a1fmsh75e923d7049e34dp155a15jsn2090a0bbcb43',
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
 	}
 };

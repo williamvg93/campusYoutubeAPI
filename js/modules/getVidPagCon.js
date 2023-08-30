@@ -1,10 +1,7 @@
 let urlAva = ""
 let userName = ""
-let vidComments = "" 
 
-
-
-export const getVidDet = async(typePet, urlPet, vidId, vidViews) => {
+export const getVidDet = async(typePet, urlPet, vidId, vidViews, options) => {
 
     console.log(vidId);
     console.log(vidViews);
@@ -36,7 +33,7 @@ export const getVidDet = async(typePet, urlPet, vidId, vidViews) => {
     let contPlayVid = document.querySelector('#contPlayVid')
     console.log(contPlayVid)
     contPlayVid.insertAdjacentHTML("afterbegin", /* html */ `
-    <iframe src="https://www.youtube.com/embed/izvodnnCvt0?si=0LEHxTMcnFagHCYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/${vidId}?si=0LEHxTMcnFagHCYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     `)
     
      /* Agregando Tags del video  */
@@ -92,9 +89,15 @@ export const getVidDet = async(typePet, urlPet, vidId, vidViews) => {
     `)
 
     /* Agregando descripcion del video principal  */
-    mainVidDes.insertAdjacentText('beforeend', `
-        ${resp.description}
-    `)
+    if(resp.description == null){
+        mainVidDes.insertAdjacentText('beforeend', `
+        no video description !!
+    `)     
+    } else {
+        mainVidDes.insertAdjacentText('beforeend', `
+            ${resp.description}
+        `)
+    }
 
     /* Agregando cantidad comentarios del video principal  */
 
@@ -112,7 +115,7 @@ export const getVidDet = async(typePet, urlPet, vidId, vidViews) => {
             const optionsCom = {
                 method: 'GET',
                 headers: {
-                    'X-RapidAPI-Key': '988cd5333amsh5514483de96ce71p152625jsnab419d6b67d8',
+                    'X-RapidAPI-Key': '96acef6a1fmsh75e923d7049e34dp155a15jsn2090a0bbcb43',
                     'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
                 }
             };
@@ -161,7 +164,7 @@ export const getVidDet = async(typePet, urlPet, vidId, vidViews) => {
     
 }
 
-export const getVidList = async(typePet, urlPet, vidId) => {
+export const getVidList = async(typePet, urlPet, vidId, options) => {
 
         console.log(vidId);
         let peticion = ''
@@ -184,7 +187,7 @@ export const getVidList = async(typePet, urlPet, vidId) => {
             ${resp.contents.map((data) =>  /* html */ `       
             
                     <div class="side-video-list">
-                        <a href="pages/playVideo.html?idVid=${data.video.videoId}" class="small-thumbnail"><img src="${data.video.thumbnails[3].url}" alt=""></a>
+                        <a href="./playVideo.html?idVid=${data.video.videoId}" class="small-thumbnail"><img src="${data.video.thumbnails[3].url}" alt=""></a>
                         <div class="vid-info" id="vid-info">
                             <a href="#">${data.video.title}</a>
                             <p>${userName}</p>
@@ -197,3 +200,4 @@ export const getVidList = async(typePet, urlPet, vidId) => {
         `)
     
     }
+

@@ -12,7 +12,7 @@ console.log(vidViews);
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '988cd5333amsh5514483de96ce71p152625jsnab419d6b67d8',
+		'X-RapidAPI-Key': '96acef6a1fmsh75e923d7049e34dp155a15jsn2090a0bbcb43',
 		'X-RapidAPI-Host': 'youtube138.p.rapidapi.com'
 	}
 };
@@ -30,15 +30,15 @@ let urlVidDetJson = '/campusYoutubeAPI/source/videoDetails.json'
 
 if (urlHost == '127.0.0.1') {
 	console.log(urlHost);
-	urlChaJson = './source/chanelDetails.json'
-	urlVidLisJson = './source/chanelVideos.json'
-	urlVidDetJson = './source/videoDetails.json'
+	urlChaJson = '/source/chanelDetails.json'
+	urlVidLisJson = '/source/chanelVideos.json'
+	urlVidDetJson = '/source/videoDetails.json'
 }
 
 /* let resPetChanel = peticion("api", urlChanel, "chanel", options) */
-/* let resPetVidDet = getVidDet("api", urlVidDet, "vidDet", options) */
-/* let resPetVidList = getVidList("api", urlVidLis, "vidList", options) */
+/* let resPetVidDet = getVidDet("api", urlVidDet, vidId, vidViews, options) */
+/* let resPetVidList = getVidList("api", urlVidLis, vidId, options) */
 
 /* let resPetChanel = peticion("json", urlChaJson) */
-let resPetVidDet = getVidDet("json",urlVidDetJson, vidId, vidViews)
-let resPetVidList = getVidList("json",urlVidLisJson, vidId)
+let resPetVidDet = getVidDet("json", urlVidDetJson, vidId, vidViews, options)
+let resPetVidList = getVidList("json", urlVidLisJson, vidId, options)
